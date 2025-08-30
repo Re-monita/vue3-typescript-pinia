@@ -8,9 +8,11 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint",
-    "lint:fix": "eslint --fix --quiet"
+    "lint:fix": "eslint --fix --quiet",
+    "prepare": "husky"
   },
   "dependencies": {
+    "husky": "^9.1.7",
     "vue": "^3.5.18"
   },
   "devDependencies": {
@@ -22,10 +24,19 @@
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-vue": "^10.4.0",
     "globals": "^16.3.0",
+    "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.41.0",
     "vite": "^7.1.2",
     "vue-tsc": "^3.0.5"
+  },
+  "lint-staged": {
+    "src/**/*.{js,cjs,ts,vue}": [
+      "npm run lint:fix"
+    ],
+    "src/**/*.{html,json,css,scss}": [
+      "npx prettier --write"
+    ]
   }
 }

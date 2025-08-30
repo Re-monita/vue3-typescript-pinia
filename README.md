@@ -1,1 +1,1 @@
-# 配置 ESLint、Prettier、EditorConfig
+# 配置 ESLint、Prettier、EditorConfig、husky
