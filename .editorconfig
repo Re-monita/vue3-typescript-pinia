@@ -1,0 +1,12 @@
+# 用于配置vscode编辑器的基本格式化规则
+# 更多配置项请参考官网：https://editorconfig.org
+# 注意：.editorconfig的配置会被vscode的settings.json覆盖
+# 建议安装EditorConfig插件以支持该文件的配置
+# 插件地址：https://marketplace.visualstudio.com/items?itemName=EditorConfig.Editor
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
